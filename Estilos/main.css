@@ -1,0 +1,154 @@
+/* Reset */
+body, h1, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #f8b195, #f67280);
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Adornos */
+.adornos {
+    position: relative;
+    margin-bottom: 40px; /* Aleja los adornos del texto */
+}
+
+.circulo {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: -30px; /* Ajusta la posición para que no toque el texto */
+    left: 10%;
+    animation: flotar 3s infinite ease-in-out;
+}
+
+.estrella {
+    width: 40px;
+    height: 40px;
+    background-color: yellow;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    position: absolute;
+    top: -20px; /* Ajusta la posición para que no toque el texto */
+    right: 10%;
+    animation: girar 4s linear infinite;
+}
+
+/* Texto principal */
+#mensaje {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: aparecerTexto 1.5s forwards;
+}
+
+/* Imagen */
+.imagen-principal {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+    margin: 20px 0; /* Esto asegura un espacio entre el texto y la imagen */
+    opacity: 0;
+    animation: aparecerImagen 2s 1.5s forwards;
+}
+
+/* Botón */
+button {
+    padding: 10px 20px;
+    background-color: #f67280;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    animation: aparecerBoton 2s 2s forwards;
+    opacity: 0;
+    margin-top: 20px; /* Añade espacio entre la imagen y el botón */
+}
+
+
+
+button:hover {
+    background-color: #c06c84;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes flotar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes aparecerTexto {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes aparecerImagen {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes aparecerBoton {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
