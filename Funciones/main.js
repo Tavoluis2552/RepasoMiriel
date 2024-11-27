@@ -7,4 +7,9 @@ document.getElementById('comenzarBtn').addEventListener('click', () => {
     }).catch((error) => {
         console.error('Error al reproducir el audio:', error);
     });
+
+    // Redirigir a la página carruselAño.html
+    setTimeout(() => {
+        window.location.href = 'Paginas/carruselAño.html'; // Ruta relativa a carruselAño.html
+    }, 500); // Retraso opcional para asegurar que el audio inicie antes de redirigir
 });

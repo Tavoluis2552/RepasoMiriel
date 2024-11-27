@@ -1,0 +1,177 @@
+
+/* Estilos para el modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000; /* Siempre encima */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permite scroll si es necesario */
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro con transparencia */
+}
+
+/* Imagen dentro del modal */
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+/* Texto para la descripción */
+.modal-caption {
+    margin: 15px auto;
+    text-align: center;
+    color: #fff;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+/* Botón de cerrar */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #f67280;
+}
+
+/* Responsividad del modal */
+@media (max-width: 600px) {
+    .modal-content {
+        max-width: 100%; /* Asegura que ocupe todo el ancho del dispositivo */
+        max-height: 70%; /* Se adapta a la altura */
+    }
+
+    .modal-caption {
+        font-size: 1rem;
+    }
+}
+
+/* Contenedor principal del carrusel */
+.carrusel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.carrusel-contenedor {
+    display: flex;
+    overflow: hidden; /* Oculta imágenes fuera del área visible */
+    width: 70%; /* Ajusta al ancho necesario */
+    border-radius: 10px; /* Opcional: Redondea el contenedor */
+    position: relative;
+}
+
+.carrusel-item {
+    flex: 0 0 100%; /* Cada imagen ocupa el 100% del contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrusel-imagen {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover; /* Asegura proporciones uniformes */
+    border: 5px solid #ff6f61; /* Bordes personalizados */
+    border-radius: 15px; /* Bordes redondeados */
+    box-sizing: border-box; /* Asegura que los bordes no interfieran con el tamaño total */
+}
+
+/* Botones del carrusel */
+.carrusel-boton {
+    background-color: #f67280;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 10px 15px;
+    margin: 0 20px; /* Espaciado entre el botón y el carrusel */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.carrusel-boton:hover {
+    background-color: #c06c84;
+    transform: scale(1.1);
+}
+
+/* Descripción */
+.descripcion {
+    font-size: 1rem;
+    margin-top: 20px;
+    color: white;
+    font-style: italic;
+    text-align: center;
+    line-height: 1.5;
+    animation: fadeIn 1s ease-in-out;
+    max-width: 80%; /* Limita el ancho de la descripción */
+    margin: 20px auto;
+}
+
+/* Botón "Volver" */
+.boton-volver {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid #ff6f61;
+    transition: all 0.3s ease-in-out;
+    margin-top: 20px;
+}
+
+.boton-volver:hover {
+    background-color: transparent;
+    color: #ff6f61;
+    border-color: #ff6f61;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    .carrusel-imagen {
+        max-height: 200px;
+    }
+
+    .carrusel-boton {
+        font-size: 1rem;
+        padding: 8px 10px;
+    }
+
+    .descripcion {
+        font-size: 0.9rem;
+    }
+
+    .boton-volver {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}

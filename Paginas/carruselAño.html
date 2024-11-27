@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repaso del Año</title>
+    <link rel="stylesheet" href="../Estilos/main.css">
+    <link rel="stylesheet" href="../Estilos/carrusel.css">
+</head>
+<body>
+    <div class="container">
+        <h1>El reflejo de tu fortaleza y dedicación</h1>
+        <div class="carrusel">
+            <button id="prevBtn" class="carrusel-boton">←</button>
+            <div class="carrusel-contenedor">
+                <div class="carrusel-item">
+                    <img src="../Imagenes/momento1.jpg" alt="Momento 1" class="carrusel-imagen">
+                </div>
+                <div class="carrusel-item">
+                    <img src="../Imagenes/momento2.jpg" alt="Momento 2" class="carrusel-imagen">
+                </div>
+                <div class="carrusel-item">
+                    <img src="../Imagenes/momento3.jpg" alt="Momento 3" class="carrusel-imagen">
+                </div>
+                <div class="carrusel-item">
+                    <img src="../Imagenes/momento4.jpg" alt="Momento 4" class="carrusel-imagen">
+                </div>
+                <div class="carrusel-item">
+                    <img src="../Imagenes/momento5.jpg" alt="Momento 5" class="carrusel-imagen">
+                </div>
+                <div class="carrusel-item">
+                    <img src="../Imagenes/momento6.jpg" alt="Momento 6" class="carrusel-imagen">
+                </div>
+                <div class="carrusel-item">
+                    <img src="../Imagenes/momento7.jpg" alt="Momento 7" class="carrusel-imagen">
+                </div>
+            </div>
+            <button id="nextBtn" class="carrusel-boton">→</button>
+        </div>
+        <p id="descripcion" class="descripcion">Descripción inicial</p>
+        <div class="boton-contenedor">
+            <a href="../index.html" class="boton-volver">Volver</a>
+        </div>
+        <!-- Modal para mostrar la imagen -->
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img id="modalImage" class="modal-content" alt="Imagen Ampliada">
+    <div id="caption" class="modal-caption"></div>
+</div>
+
+    </div>
+    <script src="../Funciones/carrusel.js"></script>
+</body>
+</html>
